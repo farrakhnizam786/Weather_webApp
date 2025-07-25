@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #dfe9f3, #ffffff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.weather-box {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+}
+
+.weather-box h2 {
+    margin-bottom: 20px;
+}
+
+.weather-box p {
+    margin: 8px 0;
+    font-size: 16px;
+}

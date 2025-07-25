@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>🌤️ Weather Forecast</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #dfe9f3, #ffffff);
+            color: #333;
+            text-align: center;
+            padding: 50px;
+        }
+        .card {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            min-width: 300px;
+            margin-top: 20px;
+        }
+        input {
+            padding: 10px;
+            font-size: 16px;
+            width: 200px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-left: 10px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🌤️ Weather Forecast</h1>
+
+    <input type="text" id="cityInput" placeholder="Enter city (e.g., Delhi)">
+    <button onclick="showWeather()">Get Weather</button>
+
+    <div class="card" id="weatherCard" style="display: none;">
+        <h2 id="cityName"></h2>
+        <p><strong>Temperature:</strong> <span id="temp"></span></p>
+        <p><strong>Condition:</strong> <span id="condition"></span></p>
+        <p><strong>Humidity:</strong> <span id="humidity"></span></p>
+        <p><strong>Wind Speed:</strong> <span id="wind"></span></p>
+    </div>
+
+    <script>
+        function showWeather() {
+            const city = document.getElementById('cityInput').value.trim().toLowerCase();
+
+            if (city === 'delhi') {
+                document.getElementById('cityName').innerText = "Delhi";
+                document.getElementById('temp').innerText = "32°C";
+                document.getElementById('condition').innerText = "Partly Cloudy";
+                document.getElementById('humidity').innerText = "58%";
+                document.getElementById('wind').innerText = "12 km/h";
+                document.getElementById('weatherCard').style.display = 'block';
+            } else {
+                document.getElementById('weatherCard').style.display = 'none';
+                alert("⚠️ Weather data not available for this city. Try 'Delhi'.");
+            }
+        }
+    </script>
+</body>
+</html>
